@@ -12,7 +12,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">Logo</div>
+        <div class="sidebar">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
         <div class="content">
             <nav>
                 <a href="#" class="btn btn-primary">
@@ -23,14 +25,22 @@
                 <section class="graph">
                     <div class="graph_header">
                         <h2>Progresso do Dia</h2>
-                        <hr class="linhaHeader">
-                        Date
+                        <div class="graph_header-line"></div>
+                        <div class="graph_header-date">
+                            <img src="/assets/images/icon-prev.png" alt="">
+                                13 de Dez
+                            <img src="/assets/images/icon-next.png" alt="">
+                        </div>
                     </div>
                     <div class="graph_header-sbtitle"> Tarefas: <b>3/6</b></div>
                     <div class="graph-placeholder">
 
                     </div>
-                    <p class="graph-text-left">Restam 3 tarefas para serem realizadas</p>
+
+                    <div class="graph_header_footer">
+                        <img src="assets/images/icon-info.png" alt="">
+                        Restam 3 tarefas para serem realizadas
+                    </div>
                 </section>
                 <section class="list">
                     <div class="list-header">
@@ -49,7 +59,12 @@
                                 <h6>Titulo da tarefa</h6>
                             </div>
                             <div class="actions">
-                                editar - exluir
+                                <a href="">
+                                    <img src="/assets/images/icon-edit.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/images/icon-delete.png" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
