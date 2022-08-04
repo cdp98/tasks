@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\Category;
 
 class TaskController extends Controller
 {
@@ -18,7 +19,24 @@ class TaskController extends Controller
 
     public function create()
     {
-        return view('tasks.create');
+        $categories = Category::all();
+
+        return view('tasks.create', [
+            'categories' => $categories
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        Task::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'due_date' => $request->date,
+            'category_id' => $request->category,
+            'user_id' => 1
+        ]);
+
+        return redirect(route('home'));
     }
 
     public function edit($id)
