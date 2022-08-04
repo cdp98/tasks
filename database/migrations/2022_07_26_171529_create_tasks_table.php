@@ -19,6 +19,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
+            $table->boolean('is_done')->default(0);
             $table->dateTime('due_date');
             $table->foreignIdFor(User::class)->references('id')->on('users');
             $table->foreignIdFor(Category::class)->references('id')->on('categories');
